@@ -1,10 +1,8 @@
-import Form from "./component/Form";
-
+import Demo2 from "./component/Demo";
 const App=()=>{
-  
     return(
       <>
-        <Form/> 
+        <Demo2/>
       </>
     );
 }
