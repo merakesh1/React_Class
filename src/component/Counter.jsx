@@ -3,7 +3,7 @@ import Button from './Button';
 
 const Counter = () => {
     const [count, setCount] = useState(0)
-    let interval=null;
+    var interval=useRef(null)
     const incrementCounter = () => {
         interval=setInterval(() => {
             setCount((count)=>{

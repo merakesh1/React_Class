@@ -1,24 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const Demo2 = () => {
-    const [a, setA] =React.useState({
-        name: 'John',
-        age: 30,
-        city: 'New York'
-    })
-    const handleData = () => {
-        setA(prevState=>{
-            return {
-                ...prevState,name:"rohit"
-            }
-        })
-        console.log(a)
+const useEffectUsage = () => {
+  const [obj, setObj] = useState([])
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("https://jsonplaceholder.typicode.com/users")
+      const result = await data.json()
+      setObj(result)
     }
+    fetchData()
+    return () => {
+      console.log("cleanup")
+    }
+  },[])
   return (
-    <>
-      <button onClick={handleData}>click</button>
-    </>
-  )
+    <div>
+      <h1>Names</h1>
+      {
+        obj.length==0 ? <p>Loading...</p> :
+        obj.map(item => (
+          <p key={item.id}>{item.name}</p>
+        ))
+      }
+    </div>
+  );
 }
 
-export default Demo2
+export default useEffectUsage

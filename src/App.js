@@ -1,9 +1,9 @@
-import Demo2 from "./component/Demo";
+import Counter from "./component/Counter";
 const App=()=>{
     return(
       <>
-        <Demo2/>
-      </>
+        <Counter/>
+.      </>
     );
 }
 
