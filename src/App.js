@@ -1,8 +1,9 @@
-import Counter from "./component/Counter";
+import UseMemoEx from "./component/useMemoEx";
+
 const App=()=>{
     return(
       <>
-        <Counter/>
+        <UseMemoEx/>
 .      </>
     );
 }

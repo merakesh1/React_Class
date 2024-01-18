@@ -3,7 +3,8 @@ import Button from './Button';
 
 const Counter = () => {
     const [count, setCount] = useState(0)
-    var interval=React.useRef(null)
+    var interval=React.useRef(null);
+
     const incrementCounter = () => {
         interval.current=setInterval(() => {
             setCount((count)=>{
@@ -14,6 +15,7 @@ const Counter = () => {
 
     const stopCounter = () => {
         clearInterval(interval.current)
+        setCount(0)
     }
 
     return (
