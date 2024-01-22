@@ -15,6 +15,7 @@ export default function ExampleRELKey() {
 
   const handleClick = () => {
     a.current++
+    console.log(a.current)
   }
   return (
     <>  
