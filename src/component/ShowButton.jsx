@@ -1,7 +1,6 @@
 import React from 'react'
-
 const ShowButton = (props) => {
-    console.log(props.text)
+  console.log(props.text)
   return (
     <div>
       <button onClick={props.handleClick}>Click</button>

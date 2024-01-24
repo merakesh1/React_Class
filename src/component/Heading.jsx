@@ -1,10 +1,19 @@
 import React from 'react'
 
+const display = () => {
+  console.log("display")
+}
 const Heading = () => {
-    console.log("heading")
+  const [count, setCount] = React.useState(0)
+  display()
+  const f1 = () => {
+    console.log("f1")
+  }
+  console.log("heading")
   return (
     <div>
-      Mern Class
+      Mern Class-{count}
+      <button onClick={()=>setCount(count + 1)}>click</button>
     </div>
   )
 }
